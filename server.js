@@ -5,10 +5,9 @@ import dotenv from 'dotenv'
 dotenv.config()
 const port = process.env.PORT || 3000
 
+import { appRoute } from "./appRoute"
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+appRoute(app)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
